@@ -1,0 +1,15 @@
+step,rows,columns
+0. Raw Data,3881992,66
+1. Removed started/canceled builds,3841797,66
+2. Dropped empty + leakage columns,3841797,44
+3. Collapsed jobs to one row per build,922624,42
+4a. Filled structural PR counts with 0,922624,42
+4b. Handled missing values (PR + previous build),922624,39
+"5. Dates converted, time features added, ID columns dropped",922624,39
+6a. Removed impossible (negative) PR ages,922612,39
+6b. Dropped near-constant columns,922612,37
+"7. Grouped branches, log-transformed skewed columns",922612,37
+8a. Removed impossible repo ages (webpy),922508,37
+8b. One-hot encoded categories,922508,43
+8c. Removed persistently broken project(s),909769,43
+9. Time-based split and scaling (train/val/test),909769,43
